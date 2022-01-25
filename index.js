@@ -17,6 +17,13 @@ client.on("ready", () => {
 
 const welcomeChannelId = "689601225330655254"
 
+client.on('message', async message => {
+        if (message.content === "add") {
+                client.emit('guildMemberAdd', message.member)
+        }
+})
+
+
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)
     member.guild.channels.cache.get(welcomeChannelId).send({
