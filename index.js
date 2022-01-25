@@ -15,7 +15,7 @@ client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
 })
 
-const welcomeChannelId = "926530810008453120"
+const welcomeChannelId = "689601225330655254"
 
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)
