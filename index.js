@@ -30,6 +30,7 @@ client.on("guildMemberAdd", async (member) => {
         content: `<@!${member.id}> Welcome to the server!`,
         files: [img]
     })
+    return;
 })
 
 client.login(process.env.TOKEN)
